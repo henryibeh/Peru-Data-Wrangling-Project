@@ -1,0 +1,40 @@
+{
+  "dataset": "Peru primary education enrollment and GDP per capita, 2001\u20132020",
+  "country": "Peru",
+  "country_code": "PER",
+  "years": "2001\u20132020",
+  "sources": [
+    {
+      "archive": "API_SE.PRM.ENRL_DS2_en_csv_v2_4538564-1.zip",
+      "indicator": "SE.PRM.ENRL",
+      "description": "Primary education, pupils (absolute count)"
+    },
+    {
+      "archive": "WDI_csv.zip",
+      "indicator": "NY.GDP.PCAP.CD",
+      "description": "GDP per capita, current US dollars"
+    }
+  ],
+  "columns": [
+    {
+      "name": "Year",
+      "data_type": "integer",
+      "meaning": "Calendar year of observation",
+      "unit": "year"
+    },
+    {
+      "name": "Primary Enrollment",
+      "data_type": "integer",
+      "meaning": "Number of pupils enrolled in primary education in Peru",
+      "unit": "pupils"
+    },
+    {
+      "name": "GDP per Capita (Current US$)",
+      "data_type": "number (decimal)",
+      "meaning": "GDP per person, measured in current U.S. dollars",
+      "unit": "current US dollars per person"
+    }
+  ],
+  "cleaning": "Filtered by country and indicator codes, reshaped yearly values, converted to numeric, checked missing values, rounded GDP per capita to 2 decimals, and exported as CSV and SQLite.",
+  "limitations": "Pupil counts are not enrollment rates; current-dollar GDP is not inflation-adjusted; trends are descriptive and do not establish causality."
+}
